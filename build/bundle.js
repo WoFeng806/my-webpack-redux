@@ -29410,9 +29410,37 @@ function routerMiddleware(history) {
 
 /***/ }),
 /* 283 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: SyntaxError: Unexpected token (9:16)\n\n\u001b[0m \u001b[90m  7 | \u001b[39m        \u001b[36mcase\u001b[39m \u001b[32m\"HELLO_changeHeader\"\u001b[39m\u001b[33m:\u001b[39m\n \u001b[90m  8 | \u001b[39m\t\t\t\u001b[36mreturn\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 | \u001b[39m                \u001b[33m...\u001b[39mstate\u001b[33m,\u001b[39m\n \u001b[90m    | \u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 | \u001b[39m\t\t\t\ttitle\u001b[33m:\u001b[39m action\u001b[33m.\u001b[39mvalue\n \u001b[90m 11 | \u001b[39m\t\t\t}\n \u001b[90m 12 | \u001b[39m        \u001b[36mdefault\u001b[39m\u001b[33m:\u001b[39m\u001b[0m\n");
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var initState = {
+    title: "Hello world"
+};
+
+function hello() {
+    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initState;
+    var action = arguments[1];
+
+    switch (action.type) {
+        case "HELLO_changeHeader":
+            return _extends({}, state, {
+                title: action.value
+            });
+        default:
+            return state;
+    }
+    return state;
+}
+
+exports.default = hello;
 
 /***/ }),
 /* 284 */
